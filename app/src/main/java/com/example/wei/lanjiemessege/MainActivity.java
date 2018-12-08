@@ -108,7 +108,7 @@ public class MainActivity extends ActionBarActivity {
     private void hangUpNotify(final String body) {
         final NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
-        builder.setContentTitle("横幅通知");
+        builder.setContentTitle("垃圾短信提示");
         builder.setContentText("通知：" + body);
         builder.setDefaults(NotificationCompat.DEFAULT_ALL);
         builder.setSmallIcon(R.mipmap.ic_launcher);
@@ -127,7 +127,7 @@ public class MainActivity extends ActionBarActivity {
             public void run() {
                 manager.cancel(TYPE_HANGUP);
                 NotificationCompat.Builder builder = new NotificationCompat.Builder(MainActivity.this);
-                builder.setContentTitle("横幅通知");
+                builder.setContentTitle("垃圾短信提示");
                 builder.setContentText("通知： " + body);
                 builder.setSmallIcon(R.mipmap.ic_launcher);
                 builder.setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.contact));
